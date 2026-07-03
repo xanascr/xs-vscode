@@ -1,0 +1,102 @@
+{
+  "name": "XanaScript",
+  "scopeName": "source.xs",
+  "fileTypes": ["xs"],
+  "patterns": [
+    {
+      "match": "\\b(PARTIU|ACABOU)\\b",
+      "name": "keyword.control.xs"
+    },
+    {
+      "match": "\\b(CRIA)\\b",
+      "name": "keyword.other.xs"
+    },
+    {
+      "match": "\\b(SE|LIGA|SO|SENAO)\\b",
+      "name": "keyword.control.conditional.xs"
+    },
+    {
+      "match": "\\b(REPETE|NA|MORAL|AI)\\b",
+      "name": "keyword.control.loop.xs"
+    },
+    {
+      "match": "\\b(VOA|CONTINUA)\\b",
+      "name": "keyword.control.loop.xs"
+    },
+    {
+      "match": "\\b(CHAMA|ESSE|CARA|VOLTA)\\b",
+      "name": "keyword.other.function.xs"
+    },
+    {
+      "match": "\\b(IMPORTA|EXPORTA)\\b",
+      "name": "keyword.control.import.xs"
+    },
+    {
+      "match": "\\b(SOLTA|O|GRITO)\\b",
+      "name": "support.function.xs"
+    },
+    {
+      "match": "\\b(FALA|BAIXO)\\b",
+      "name": "support.function.xs"
+    },
+    {
+      "match": "\\b(AGORA|VAI)\\b",
+      "name": "support.function.xs"
+    },
+    {
+      "match": "\\b(ESPERA|AI)\\b",
+      "name": "support.function.xs"
+    },
+    {
+      "match": "\\b(SORTEIA|PARSEIA|OUVE|AQUI)\\b",
+      "name": "support.function.xs"
+    },
+    {
+      "match": "\\b(VERDADEIRO|FALSO|NULO)\\b",
+      "name": "constant.language.xs"
+    },
+    {
+      "match": "\\b(TENTA|PEGA|ERRO)\\b",
+      "name": "keyword.control.xs"
+    },
+    {
+      "match": "\\b(ASSINCRONO)\\b",
+      "name": "storage.modifier.xs"
+    },
+    {
+      "match": "\\b[0-9]+\\b",
+      "name": "constant.numeric.xs"
+    },
+    {
+      "begin": "\"",
+      "end": "\"",
+      "name": "string.quoted.double.xs"
+    },
+    {
+      "begin": "'",
+      "end": "'",
+      "name": "string.quoted.single.xs"
+    },
+    {
+      "begin": "`",
+      "end": "`",
+      "name": "string.template.xs",
+      "patterns": [
+        {
+          "begin": "\\$\\{",
+          "end": "\\}",
+          "name": "string.template.expression.xs",
+          "patterns": [{ "include": "source.xs" }]
+        }
+      ]
+    },
+    {
+      "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b",
+      "name": "variable.other.xs"
+    },
+    {
+      "match": "(//.*$)",
+      "name": "comment.line.double-slash.xs"
+    }
+  ]
+}

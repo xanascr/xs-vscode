@@ -1,0 +1,124 @@
+{
+  "PARTIU / ACABOU": {
+    "prefix": "partiu",
+    "body": [
+      "PARTIU()",
+      "",
+      "\t$0",
+      "",
+      "ACABOU()"
+    ],
+    "description": "Estrutura completa de programa"
+  },
+  "CRIA variavel": {
+    "prefix": "cria",
+    "body": "CRIA ${1:nome} = ${2:valor}",
+    "description": "Declara variável"
+  },
+  "SE LIGA SO": {
+    "prefix": "se",
+    "body": [
+      "SE LIGA SO (${1:condicao}) {",
+      "\t${2}",
+      "}"
+    ],
+    "description": "Condicional if"
+  },
+  "SENAO": {
+    "prefix": "senao",
+    "body": [
+      "SENAO {",
+      "\t${1}",
+      "}"
+    ],
+    "description": "Else"
+  },
+  "REPETE NA MORAL": {
+    "prefix": "repete",
+    "body": [
+      "REPETE NA MORAL (${1:init}; ${2:test}; ${3:update}) {",
+      "\t${4}",
+      "}"
+    ],
+    "description": "Loop for"
+  },
+  "REPETE AI": {
+    "prefix": "enquanto",
+    "body": [
+      "REPETE AI (${1:condicao}) {",
+      "\t${2}",
+      "}"
+    ],
+    "description": "Loop while"
+  },
+  "CHAMA ESSE CARA": {
+    "prefix": "funcao",
+    "body": [
+      "CHAMA ESSE CARA ${1:nome}(${2:params}) {",
+      "\t${3}",
+      "}"
+    ],
+    "description": "Declara função"
+  },
+  "VOLTA": {
+    "prefix": "volta",
+    "body": "VOLTA ${1:expr}",
+    "description": "Return"
+  },
+  "SOLTA O GRITO": {
+    "prefix": "solta",
+    "body": "SOLTA O GRITO(${1:expr})",
+    "description": "Console.log"
+  },
+  "FALA BAIXO": {
+    "prefix": "fala",
+    "body": "FALA BAIXO(${1:expr})",
+    "description": "Console.warn"
+  },
+  "IMPORTA": {
+    "prefix": "importa",
+    "body": "IMPORTA \"${1:path}\"",
+    "description": "Importa módulo"
+  },
+  "EXPORTA": {
+    "prefix": "exporta",
+    "body": "EXPORTA ${1:nome}",
+    "description": "Exporta símbolo"
+  },
+  "TENTA / PEGA": {
+    "prefix": "tenta",
+    "body": [
+      "TENTA {",
+      "\t${1}",
+      "} PEGA(${2:err}) {",
+      "\t${3}",
+      "}"
+    ],
+    "description": "Try/Catch"
+  },
+  "AGORA VAI": {
+    "prefix": "agora",
+    "body": "AGORA VAI(\"${1:url}\")",
+    "description": "HTTP request"
+  },
+  "ESPERA AI": {
+    "prefix": "espera",
+    "body": "ESPERA AI(${1:ms})",
+    "description": "Sleep"
+  },
+  "SORTEIA": {
+    "prefix": "sorteia",
+    "body": "SORTEIA(${1:min}, ${2:max})",
+    "description": "Número aleatório"
+  },
+  "PARSEIA": {
+    "prefix": "parseia",
+    "body": "PARSEIA(${1:json})",
+    "description": "JSON.parse"
+  },
+  "OUVE AQUI": {
+    "prefix": "ouve",
+    "body": "OUVE AQUI(\"${1:env}\")",
+    "description": "process.env"
+  }
+}

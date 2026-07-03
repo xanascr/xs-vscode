@@ -1,0 +1,90 @@
+{
+  "name": "xanascript",
+  "displayName": "XanaScript",
+  "description": "XanaScript language support — LSP, autocomplete, syntax highlight, formatter, snippets, commands",
+  "version": "2.0.0",
+  "publisher": "xanascript",
+  "license": "MIT",
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Programming Languages", "Formatters", "Linters"],
+  "activationEvents": ["onLanguage:xs", "onCommand:xs.run", "onCommand:xs.build", "onCommand:xs.test"],
+  "main": "./src/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "xs",
+        "aliases": ["XanaScript", "xs"],
+        "extensions": [".xs"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "xs",
+        "scopeName": "source.xs",
+        "path": "./syntaxes/xs.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "xs",
+        "path": "./snippets/xs.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "xs.run",
+        "title": "XanaScript: Executar arquivo"
+      },
+      {
+        "command": "xs.build",
+        "title": "XanaScript: Build (JS otimizado)"
+      },
+      {
+        "command": "xs.test",
+        "title": "XanaScript: Rodar testes"
+      },
+      {
+        "command": "xs.format",
+        "title": "XanaScript: Format arquivo"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "xs.run",
+          "group": "xs",
+          "when": "editorLangId == xs"
+        },
+        {
+          "command": "xs.build",
+          "group": "xs",
+          "when": "editorLangId == xs"
+        },
+        {
+          "command": "xs.format",
+          "group": "xs",
+          "when": "editorLangId == xs"
+        }
+      ],
+      "commandPalette": [
+        { "command": "xs.run" },
+        { "command": "xs.build" },
+        { "command": "xs.test" },
+        { "command": "xs.format" }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "xs.run",
+        "key": "ctrl+alt+x",
+        "when": "editorLangId == xs"
+      },
+      {
+        "command": "xs.build",
+        "key": "ctrl+alt+b",
+        "when": "editorLangId == xs"
+      }
+    ]
+  }
+}
