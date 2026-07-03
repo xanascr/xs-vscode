@@ -46,7 +46,7 @@ Ou abra a pasta no VS Code e pressione `F5`.
 | `importa` | `IMPORTA "path"` |
 | `tenta` | `TENTA { } PEGA(err) { }` |
 
-[Ver todos os snippets](snippets/xs.json)
+[Ver todos os snippets](https://github.com/xanascr/xs-vscode/blob/main/snippets/xs.json)
 
 ## Reportar bugs
 
