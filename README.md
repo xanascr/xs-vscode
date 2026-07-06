@@ -1,16 +1,16 @@
-# XanaScript para VS Code
+# XanaScript for VS Code
 
-Extensao oficial do XanaScript (.xs) para Visual Studio Code.
+Official XanaScript (.xs) extension for Visual Studio Code.
 
 ## Features
 
-- **Syntax Highlight** - codigo colorido com todas as keywords
-- **Formatter** - formata `.xs` automaticamente
-- **Snippets** - atalhos para estruturas comuns
-- **Auto-close** - brackets, aspas e backticks
-- **Bracket matching** - destaca pares
+- **Syntax Highlight** — colorized code with full keyword support
+- **Formatter** — auto-format `.xs` files
+- **Snippets** — shortcuts for common structures
+- **Auto-close** — brackets, quotes, and backticks
+- **Bracket matching** — highlight matching pairs
 
-## Instalacao
+## Installation
 
 ```bash
 git clone https://github.com/xanascr/xs-vscode.git
@@ -20,21 +20,21 @@ vsce package
 code --install-extension xanascript-*.vsix
 ```
 
-Ou abra a pasta no VS Code e pressione `F5`.
+Or open the folder in VS Code and press `F5`.
 
-## Comandos
+## Commands
 
-| Comando | Descricao |
+| Command | Description |
 |---|---|
-| `XanaScript: Executar arquivo` | Executa .xs atual |
-| `XanaScript: Build (JS otimizado)` | Compila para JS |
-| `XanaScript: Rodar testes` | Executa testes |
-| `XanaScript: Format arquivo` | Formata codigo |
-| `Formatar documento` | Shift+Alt+F |
+| `XanaScript: Run file` | Execute current .xs file |
+| `XanaScript: Build (optimized JS)` | Compile to JavaScript |
+| `XanaScript: Run tests` | Execute tests |
+| `XanaScript: Format file` | Format code |
+| `Format Document` | Shift+Alt+F |
 
 ## Snippets
 
-| Atalho | Expande |
+| Shortcut | Expands to |
 |---|---|
 | `partiu` | `PARTIU()` / `ACABOU()` |
 | `cria` | `CRIA nome = valor` |
@@ -46,8 +46,8 @@ Ou abra a pasta no VS Code e pressione `F5`.
 | `importa` | `IMPORTA "path"` |
 | `tenta` | `TENTA { } PEGA(err) { }` |
 
-[Ver todos os snippets](https://github.com/xanascr/xs-vscode/blob/main/snippets/xs.json)
+[View all snippets](https://github.com/xanascr/xs-vscode/blob/main/snippets/xs.json)
 
-## Reportar bugs
+## Report bugs
 
 https://github.com/xanascr/xs-vscode/issues
