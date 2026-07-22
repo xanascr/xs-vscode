@@ -1,13 +1,7 @@
 {
   "PARTIU / ACABOU": {
     "prefix": "partiu",
-    "body": [
-      "PARTIU()",
-      "",
-      "\t$0",
-      "",
-      "ACABOU()"
-    ],
+    "body": ["PARTIU()", "", "\t$0", "", "ACABOU()"],
     "description": "Estrutura completa de programa"
   },
   "CRIA variavel": {
@@ -17,53 +11,63 @@
   },
   "SE LIGA SO": {
     "prefix": "se",
-    "body": [
-      "SE LIGA SO (${1:condicao}) {",
-      "\t${2}",
-      "}"
-    ],
+    "body": ["SE LIGA SO (${1:condicao}) {", "\t${2}", "}"],
     "description": "Condicional if"
   },
   "SENAO": {
     "prefix": "senao",
-    "body": [
-      "SENAO {",
-      "\t${1}",
-      "}"
-    ],
+    "body": ["SENAO {", "\t${1}", "}"],
     "description": "Else"
   },
   "REPETE NA MORAL": {
     "prefix": "repete",
-    "body": [
-      "REPETE NA MORAL (${1:init}; ${2:test}; ${3:update}) {",
-      "\t${4}",
-      "}"
-    ],
+    "body": ["REPETE NA MORAL (${1:init}; ${2:test}; ${3:update}) {", "\t${4}", "}"],
     "description": "Loop for"
   },
   "REPETE AI": {
     "prefix": "enquanto",
-    "body": [
-      "REPETE AI (${1:condicao}) {",
-      "\t${2}",
-      "}"
-    ],
+    "body": ["REPETE AI (${1:condicao}) {", "\t${2}", "}"],
     "description": "Loop while"
   },
   "CHAMA ESSE CARA": {
     "prefix": "funcao",
-    "body": [
-      "CHAMA ESSE CARA ${1:nome}(${2:params}) {",
-      "\t${3}",
-      "}"
-    ],
+    "body": ["CHAMA ESSE CARA ${1:nome}(${2:params}) {", "\t${3}", "}"],
     "description": "Declara função"
   },
   "VOLTA": {
     "prefix": "volta",
     "body": "VOLTA ${1:expr}",
     "description": "Return"
+  },
+  "CLASSE": {
+    "prefix": "classe",
+    "body": ["CLASSE ${1:Nome} {", "\tCONSTRUTOR(${2:params}) {", "\t\tISTO.${3:prop} = ${4:valor}", "\t}", "", "\tMETODO ${5:nome}(${6:params}) {", "\t\t${7}", "\t}", "}"],
+    "description": "Declara classe"
+  },
+  "HERDA": {
+    "prefix": "herda",
+    "body": ["CLASSE ${1:Filha} HERDA ${2:Mae} {", "\tCONSTRUTOR(${3:params}) {", "\t\t${4}", "\t}", "}"],
+    "description": "Classe que herda de outra"
+  },
+  "NOVA": {
+    "prefix": "nova",
+    "body": "NOVA ${1:Classe}(${2:args})",
+    "description": "Instancia objeto"
+  },
+  "METODO": {
+    "prefix": "metodo",
+    "body": "METODO ${1:nome}(${2:params}) {", "  ${3}", "}",
+    "description": "Declara método"
+  },
+  "ESCOLHE / CASO": {
+    "prefix": "escolhe",
+    "body": ["ESCOLHE ${1:expr} {", "\tCASO ${2:valor}", "\t\t${3}", "\tPADRAO", "\t\t${4}", "}"],
+    "description": "Switch/Case"
+  },
+  "COMBINA": {
+    "prefix": "combina",
+    "body": ["COMBINA ${1:expr} {", "\tCASO ${2:padrao} => ${3}", "\tPADRAO => ${4}", "}"],
+    "description": "Pattern matching"
   },
   "SOLTA O GRITO": {
     "prefix": "solta",
@@ -87,14 +91,23 @@
   },
   "TENTA / PEGA": {
     "prefix": "tenta",
-    "body": [
-      "TENTA {",
-      "\t${1}",
-      "} PEGA(${2:err}) {",
-      "\t${3}",
-      "}"
-    ],
+    "body": ["TENTA {", "\t${1}", "} PEGA(${2:err}) {", "\t${3}", "}"],
     "description": "Try/Catch"
+  },
+  "TESTE": {
+    "prefix": "teste",
+    "body": ["TESTE \"${1:nome}\" {", "\tAFIRMA(${2:expr})", "}"],
+    "description": "Bloco de teste"
+  },
+  "TAREFA": {
+    "prefix": "tarefa",
+    "body": ["TAREFA \"${1:nome}\" {", "\t${2}", "}"],
+    "description": "Task assíncrona"
+  },
+  "TABELA": {
+    "prefix": "tabela",
+    "body": ["TABELA \"${1:nome}\" {", "\tCRIA ${2:campo} ${3:TEXTO}", "}"],
+    "description": "Tabela ORM"
   },
   "AGORA VAI": {
     "prefix": "agora",

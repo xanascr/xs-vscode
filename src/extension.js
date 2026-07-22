@@ -8,7 +8,7 @@ const { spawn } = require("child_process");
 let lspClient = null;
 
 function activate(context) {
-  console.log("⚡ XanaScript extension v2.0 ativada!");
+  console.log("XanaScript extension v2.2.8 ativada!");
 
   // ═══════════════════════════════════════════
   // LSP Client
@@ -88,8 +88,6 @@ function activate(context) {
 
   const diagnosticListener = vscode.workspace.onDidChangeTextDocument(event => {
     if (event.document.languageId !== "xs") return;
-    // LSP cuida disso quando conectado
-    if (lspClient) return;
   });
 
   context.subscriptions.push(formatProvider, runCmd, buildCmd, testCmd, formatCmd, diagnosticListener);
@@ -273,8 +271,7 @@ function handleLSPMessage(data) {
         );
       });
 
-      const collection = vscode.languages.getDiagnostics();
-      // Use nosso próprio collection
+      diagnosticCollection.set(uri, diagnostics);
     }
   } catch (e) {
     console.error("LSP parse error:", e.message);

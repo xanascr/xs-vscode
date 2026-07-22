@@ -16,7 +16,7 @@
       "name": "keyword.control.conditional.xs"
     },
     {
-      "match": "\\b(REPETE|NA|MORAL|AI)\\b",
+      "match": "\\b(REPETE|NA|MORAL|AI|ENQUANTO)\\b",
       "name": "keyword.control.loop.xs"
     },
     {
@@ -28,7 +28,7 @@
       "name": "keyword.other.function.xs"
     },
     {
-      "match": "\\b(IMPORTA|EXPORTA)\\b",
+      "match": "\\b(IMPORTA|EXPORTA|COMO|AS)\\b",
       "name": "keyword.control.import.xs"
     },
     {
@@ -44,7 +44,7 @@
       "name": "support.function.xs"
     },
     {
-      "match": "\\b(ESPERA|AI)\\b",
+      "match": "\\b(ESPERA)\\b",
       "name": "support.function.xs"
     },
     {
@@ -56,12 +56,48 @@
       "name": "constant.language.xs"
     },
     {
-      "match": "\\b(TENTA|PEGA|ERRO)\\b",
+      "match": "\\b(TENTA|PEGA|ERRO|JOGAFORA)\\b",
       "name": "keyword.control.xs"
     },
     {
-      "match": "\\b(ASSINCRONO)\\b",
+      "match": "\\b(ASSINCRONO|MACRO)\\b",
       "name": "storage.modifier.xs"
+    },
+    {
+      "match": "\\b(CLASSE|HERDA|CONSTRUTOR|METODO|ISTO|NOVA)\\b",
+      "name": "keyword.other.class.xs"
+    },
+    {
+      "match": "\\b(ESCOLHE|CASO|PADRAO)\\b",
+      "name": "keyword.control.switch.xs"
+    },
+    {
+      "match": "\\b(COMBINA)\\b",
+      "name": "keyword.control.match.xs"
+    },
+    {
+      "match": "\\b(SERVIDOR|PARA)\\b",
+      "name": "support.function.xs"
+    },
+    {
+      "match": "\\b(TAMANHO|DIVIDE|TEXTO|ENCONTRA|DECODIFICA|URL|JUNTAR)\\b",
+      "name": "support.function.builtin.xs"
+    },
+    {
+      "match": "\\b(TESTE|AFIRMA|ASSUNTO)\\b",
+      "name": "keyword.other.test.xs"
+    },
+    {
+      "match": "\\b(TAREFA)\\b",
+      "name": "keyword.other.task.xs"
+    },
+    {
+      "match": "\\b(TABELA)\\b",
+      "name": "keyword.other.table.xs"
+    },
+    {
+      "match": "\\b(TIPO|CRUD)\\b",
+      "name": "keyword.other.type.xs"
     },
     {
       "match": "\\b[0-9]+\\b",

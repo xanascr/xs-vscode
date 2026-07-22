@@ -3,7 +3,7 @@
   "displayName": "XanaScript",
   "description": "XanaScript language support — LSP, autocomplete, syntax highlight, formatter, snippets, commands",
   "icon": "images/icon.png",
-  "version": "2.0.0",
+  "version": "2.2.8",
   "publisher": "xanascript",
   "license": "MIT",
   "repository": {
